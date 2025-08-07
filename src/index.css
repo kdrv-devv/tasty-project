@@ -1,0 +1,22 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;800;900&display=swap);
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.mc {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.mybtn {
+  box-shadow: 0 0 29px 0 rgba(255, 91, 0, 0.15);
+  background: #ff5b00;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+}
