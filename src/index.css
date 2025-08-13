@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;800;900&display=swap);
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 @tailwind base;
 @tailwind components;
@@ -14,9 +14,59 @@ body {
 
 .mybtn {
   box-shadow: 0 0 29px 0 rgba(255, 91, 0, 0.15);
-  background: #ff5b00;
+  background-color: #ff5b00;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: #E3F2FD;
   font-weight: 600;
+  transition:.2s ease-in-out;
+
+
 }
+
+.mybtn:hover {
+  background-color: #ff5b00;
+    box-shadow: 0px 0px 10px  #ff7e39;
+}
+
+
+.review::before{
+
+  content: "";
+  height: 100%;
+  width: 2px;
+  background-color: rgba(0, 0, 0, 0.701);
+  position: absolute;
+  left: -7px;
+
+}
+
+
+.yellow-card::after{
+
+  content:"";
+
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 0;
+  right: -15.5px;
+  background:#ff5b00;
+  clip-path: polygon(100% 0, 0 0, 0 94%);
+
+  }
+
+
+  .green-card::after{
+
+  content:"";
+
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 0;
+  left: -15.5px;
+  background:#203350;
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+
+  }
