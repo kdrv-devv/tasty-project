@@ -1,11 +1,14 @@
 import { FaBars } from "react-icons/fa6";
 import { useDrawerStore } from "../../zustand/drawer";
 import DrawerComponent from "../home-components/Drawer";
+// import { notificationApi } from "../../generics/notifications";
 
 
 
 const Header = () => {
+  
     const toggleDrawer = useDrawerStore((state) => state.drawerToggle);
+
   return (
     <header className="bg-[#1A1A1D] sticky top-0 left-0 z-50 shadow-xl">
       <div className="mc flex items-center justify-between py-5">

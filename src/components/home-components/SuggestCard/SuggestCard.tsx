@@ -3,7 +3,7 @@ import mouseImg from "../../../images/home-imges/mouse-img.png";
 
 const SuggestCard = () => {
   return (
-    <div className="suggest-card  md:hover:-translate-y-3 duration-300 cursor-pointer relative shadow-xl w-full rounded-[12px] overflow-hidden h-[300px] md:h-[389px] ">
+    <div className="suggest-card  md:hover:-translate-y-3 duration-300 cursor-pointer relative shadow-xl w-[300px] rounded-[12px] overflow-hidden h-[300px] md:h-[389px] ">
       
       <div className="absolute text-white font-[700] w-[20%] flex items-center justify-center  left-0 top-4 rounded-[0px_20px_20px_0px] border-2 border-[#f57474] bg-[#f00000]   ">
           30%

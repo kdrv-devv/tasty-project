@@ -70,3 +70,18 @@ body {
   clip-path: polygon(100% 0, 0 0, 100% 100%);
 
   }
+
+
+  .suggest-bottom{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+
+  }
+
+
+.footer-img1{
+    user-select: none !important;
+}
