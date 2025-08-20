@@ -46,13 +46,13 @@ const Showcase = () => {
 
             <div className="showcase-links flex items-center gap-3 text-xl md:text-2xl lg:text-3xl text-[gray]">
               <a target="_blank" href="">
-                <IoLogoInstagram />
+                <IoLogoInstagram className=" hover:text-[#f46308]" />
               </a>
               <a target="_blank" href="">
-                <IoLogoLinkedin />
+                <IoLogoLinkedin className=" hover:text-[#4a4ae2]" />
               </a>
               <a target="_blank" href="">
-                <IoLogoTwitter />
+                <IoLogoTwitter className=" hover:text-[#4c6aff]" />
               </a>
             </div>
           </div>

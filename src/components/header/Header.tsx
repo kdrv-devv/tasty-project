@@ -1,12 +1,15 @@
 import { FaBars } from "react-icons/fa6";
 import { useDrawerStore } from "../../zustand/drawer";
 import DrawerComponent from "../home-components/Drawer";
+import { useModalStore } from "../../zustand/modalstore";
 // import { notificationApi } from "../../generics/notifications";
 
 
 
 const Header = () => {
-  
+    const setModalVisibility = useModalStore(
+      (state) => state.setAuthModalVisiblity
+    );
     const toggleDrawer = useDrawerStore((state) => state.drawerToggle);
 
   return (
@@ -21,7 +24,7 @@ const Header = () => {
         </nav>
 
         <div className="header-right flex items-center gap-5    ">
-          <button className="hidden sm:flex mybtn w-[100px]  h-9 rounded-[7px]">Register</button>
+          <button onClick={()=> setModalVisibility()} className="hidden sm:flex mybtn w-[100px]  h-9 rounded-[7px]">Register</button>
           <button className="hidden sm:flex w-[67px] lg:w-[87px] h-9 border-[#ff5b00] border-2 rounded-[7px]  items-center justify-center font-[600] text-[#ff5b00] duration-200 hover:shadow-[0px_0px_10px_#ff7e39]">Login</button>
           <button onClick={()=> toggleDrawer()} className="block sm:hidden text-xl text-white "><FaBars /></button>
         </div>
