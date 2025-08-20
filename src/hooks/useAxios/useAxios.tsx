@@ -16,6 +16,8 @@ export const useAxios = () => {
       method,
       params: {
         ...params,
+        id:5,
+        username:'kdrv'
       },
       headers: {
         "Content-Type": "application/json",
