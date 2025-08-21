@@ -34,6 +34,7 @@ const AuthModal = () => {
       messageError: "Ro'yxatdan o'tishda nimadur xato ketdi!",
       messageSucces: "Muvofaqiyatli ro'yxatdan o'tdingiz !",
     });
+    
   const { mutate: loginMutation, isPending: loginPending } = useQueryMutation({
     url: "/auth/login",
     method: "POST",

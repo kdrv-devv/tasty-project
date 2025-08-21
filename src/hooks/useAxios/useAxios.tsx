@@ -12,18 +12,17 @@ export const useAxios = () => {
   const response = (props: propTypes) => {
     const { url, method, params, headers, body } = props;
     return axios({
-      url: `${import.meta.env.VITE_BASE_URL}${url}`,
+      url: `${import.meta.env.VITE_BASE_URL}${url}`, // param
       method,
-      params: {
+      params: { // query
         ...params,
-        id:5,
-        username:'kdrv'
       },
       headers: {
         "Content-Type": "application/json",
         ...headers,
       },
       data: body,
+      withCredentials:true
     });
   };
 
