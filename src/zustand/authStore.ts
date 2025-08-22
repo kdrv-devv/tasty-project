@@ -15,9 +15,10 @@ interface ModalStoreType {
 }
 
 export const useAuthStore = create<ModalStoreType>((set) => ({
-  user: null,
+  user: JSON.parse(localStorage.getItem("user") as string) || null,
   setUserData: (data) => {
     return set({ user:{...data}  });
   },
   signOut: () => set({ user: null }),
 }));
+

@@ -4,7 +4,6 @@ import DrawerComponent from "../home-components/Drawer";
 import { useModalStore } from "../../zustand/modalstore";
 import { useAuthStore, type UserDataType } from "../../zustand/authStore";
 import { Avatar } from "antd";
-import { useQueryHandler } from "../../hooks/useQueryHandler/useQueryHandler";
 // import { notificationApi } from "../../generics/notifications";
 
 const Header = () => {
@@ -13,10 +12,7 @@ const Header = () => {
   );
   const toggleDrawer = useDrawerStore((state) => state.drawerToggle);
   const user = useAuthStore((state) => state.user) as UserDataType;
-  console.log(user , "user");
-  const {data} = useQueryHandler({url:"/auth/me",pathname:"me" })
-  console.log(data , "data get");
-  
+  const toggleProfileDrawer = useModalStore((state) => state.setProfileModalVisiblity);
   return (
 
     <header className="bg-[#1A1A1D] sticky top-0 left-0 z-50 shadow-xl">
@@ -39,7 +35,7 @@ const Header = () => {
 
         <div className="header-right flex items-center gap-5    ">
           {user ? (
-            <Avatar className="!bg-[#ff5b00] cursor-pointer font-[600] text-xl md:text-2xl !text-[white]" size="large">{user.firstName.slice(0,1)}</Avatar>
+            <Avatar onClick={()=> toggleProfileDrawer()}  className="!bg-[#ff5b00] cursor-pointer font-[600] text-xl md:text-2xl !text-[white]" size="large">{user.firstName.slice(0,1)}</Avatar>
           ) : (
             <button
               onClick={() => setModalVisibility()}

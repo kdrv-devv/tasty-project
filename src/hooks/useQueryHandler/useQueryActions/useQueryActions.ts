@@ -34,9 +34,10 @@ export const useQueryMutation = (props: MutationType) => {
         setUserData(data?.data.user);
         localStorage.setItem("token", token);
         localStorage.setItem("user", JSON.stringify(data?.data.user));
+      }else{
+        setModalVisibility();
       }
 
-      setModalVisibility();
       toast.success(messageSucces);
     },
     onError: () => {

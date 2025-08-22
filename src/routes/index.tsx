@@ -10,11 +10,16 @@ export const router = createBrowserRouter([
       {
         index: true,
         element: (
-          
             <HomePage />
-         
         ),
       },
     ],
+  },
+  {
+
+    path:"/:id",
+    element:<h1>detail</h1>
+
   }
+
 ]);
